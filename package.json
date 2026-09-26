@@ -1,0 +1,27 @@
+{
+  "name": "vairynt",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.6.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev:api": "npm run dev --workspace @vairynt/api",
+    "dev:agent": "npm run dev --workspace @vairynt/agent",
+    "dev:web": "npm run dev --workspace @vairynt/web",
+    "start": "node apps/api/dist/main.js",
+    "check:providers": "npm run build --workspace @vairynt/agent && node scripts/run-provider-check.mjs",
+    "build": "npm run build --workspace @vairynt/core && npm run build --workspace @vairynt/api && npm run build --workspace @vairynt/agent && npm run build --workspace @vairynt/web",
+    "typecheck": "npm run typecheck --workspace @vairynt/core && npm run typecheck --workspace @vairynt/api && npm run typecheck --workspace @vairynt/agent && npm run typecheck --workspace @vairynt/web",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@google/genai": "^2.21.0",
+    "openai": "^6.49.0"
+  }
+}

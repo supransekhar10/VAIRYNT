@@ -57,4 +57,3 @@ npm run build
 The provider-free benchmark exports raw and computed records under `evidence/`. Browser/Rime trials are intentionally pending until the configured Gemini model can generate a real reply and browser output is captured with one local waveform clock. See `RIME_EVIDENCE.md`.
 
 No public deployment URL has been verified for this repository. Do not treat the service as deployed until a hosting provider reports a URL and the fresh-browser checklist passes.
-

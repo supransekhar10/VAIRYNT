@@ -1,0 +1,20 @@
+# Environment files contain local secrets.
+.env
+.env.*
+!.env.example
+agent-secrets.env
+
+# Installed and generated artifacts
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+.npm-cache/
+.local-tools/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

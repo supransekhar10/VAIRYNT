@@ -1,0 +1,8 @@
+{
+  "fixtureLabel": "SYNTHETIC DEMO INVENTORY — NOT PRODUCTION DATA",
+  "items": {
+    "4471": { "partId": "4471", "units": 3, "shelf": "A2" },
+    "4472": { "partId": "4472", "units": 12, "shelf": "B4" },
+    "4473": { "partId": "4473", "units": 0 }
+  }
+}

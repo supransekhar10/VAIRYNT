@@ -1,0 +1,1468 @@
+[
+  {
+    "id": "ignored-1",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2821,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444882157-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444882968-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444882157-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2012,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444882968-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2009,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-2",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2805,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444884978-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444885778-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444884978-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2017,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444885778-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2004,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-3",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2812,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444887783-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444888590-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444887783-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2010,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444888590-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2004,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-4",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2823,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444890594-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444891409-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444890594-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2005,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444891409-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2008,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-5",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2816,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444893417-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444894230-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444893417-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2010,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444894230-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2003,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-6",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2807,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444896233-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444897039-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444896233-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444897039-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2000,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-7",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2810,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444899040-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444899843-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444899040-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2008,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444899843-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "ignored-8",
+    "scenario": "ignored-cancellation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2808,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "replacement": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "finalEpoch": 1
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444901850-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444902656-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444901850-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2000,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444902656-2",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 1,
+        "durationMs": 2001,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "rapid-1",
+    "scenario": "rapid-corrections",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 3622,
+    "passed": true,
+    "outcomes": {
+      "first": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "second": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "third": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4473",
+            "units": 0
+          }
+        }
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444904658-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444905460-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444906266-3",
+        "identifier": "4473",
+        "status": "started",
+        "epoch": 2,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444904658-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2021,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444905460-2",
+        "identifier": "4472",
+        "status": "stale",
+        "epoch": 1,
+        "durationMs": 2013,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444906266-3",
+        "identifier": "4473",
+        "status": "found",
+        "epoch": 2,
+        "durationMs": 2014,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "rapid-2",
+    "scenario": "rapid-corrections",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 3619,
+    "passed": true,
+    "outcomes": {
+      "first": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "second": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "third": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4473",
+            "units": 0
+          }
+        }
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444908280-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444909087-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444909891-3",
+        "identifier": "4473",
+        "status": "started",
+        "epoch": 2,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444908280-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2006,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444909087-2",
+        "identifier": "4472",
+        "status": "stale",
+        "epoch": 1,
+        "durationMs": 2012,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444909891-3",
+        "identifier": "4473",
+        "status": "found",
+        "epoch": 2,
+        "durationMs": 2008,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "rapid-3",
+    "scenario": "rapid-corrections",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 3618,
+    "passed": true,
+    "outcomes": {
+      "first": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "second": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "third": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4473",
+            "units": 0
+          }
+        }
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444911900-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444912700-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444913508-3",
+        "identifier": "4473",
+        "status": "started",
+        "epoch": 2,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444911900-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2000,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444912700-2",
+        "identifier": "4472",
+        "status": "stale",
+        "epoch": 1,
+        "durationMs": 2001,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444913508-3",
+        "identifier": "4473",
+        "status": "found",
+        "epoch": 2,
+        "durationMs": 2010,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "rapid-4",
+    "scenario": "rapid-corrections",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 3611,
+    "passed": true,
+    "outcomes": {
+      "first": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "second": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "third": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4473",
+            "units": 0
+          }
+        }
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444915518-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444916318-2",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 1,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444917126-3",
+        "identifier": "4473",
+        "status": "started",
+        "epoch": 2,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444915518-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2011,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444916318-2",
+        "identifier": "4472",
+        "status": "stale",
+        "epoch": 1,
+        "durationMs": 2014,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444917126-3",
+        "identifier": "4473",
+        "status": "found",
+        "epoch": 2,
+        "durationMs": 2004,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "cancel-1",
+    "scenario": "explicit-cancel",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2007,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444919130-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444919130-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "cancel-2",
+    "scenario": "explicit-cancel",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2003,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444921137-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444921137-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2003,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "cancel-3",
+    "scenario": "explicit-cancel",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2011,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444923140-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444923140-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2010,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "cancel-4",
+    "scenario": "explicit-cancel",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2015,
+    "passed": true,
+    "outcomes": {
+      "old": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "finalEpoch": 2
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444925151-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444925151-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2015,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "timeout-1",
+    "scenario": "timeout",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": null,
+      "timeoutMs": 25,
+      "stressMode": false
+    },
+    "elapsedMs": 36,
+    "passed": true,
+    "outcomes": {
+      "result": {
+        "kind": "resolved",
+        "value": {
+          "status": "timeout",
+          "identifier": "4471",
+          "message": "lookupInventory timed out."
+        }
+      }
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927166-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": false,
+        "delayMs": 2000,
+        "timeoutMs": 25
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927166-1",
+        "identifier": "4471",
+        "status": "timeout",
+        "epoch": 0,
+        "durationMs": 36,
+        "stressMode": false,
+        "delayMs": 2000,
+        "timeoutMs": 25
+      }
+    ]
+  },
+  {
+    "id": "timeout-2",
+    "scenario": "timeout",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": null,
+      "timeoutMs": 25,
+      "stressMode": false
+    },
+    "elapsedMs": 32,
+    "passed": true,
+    "outcomes": {
+      "result": {
+        "kind": "resolved",
+        "value": {
+          "status": "timeout",
+          "identifier": "4471",
+          "message": "lookupInventory timed out."
+        }
+      }
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927202-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": false,
+        "delayMs": 2000,
+        "timeoutMs": 25
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927202-1",
+        "identifier": "4471",
+        "status": "timeout",
+        "epoch": 0,
+        "durationMs": 32,
+        "stressMode": false,
+        "delayMs": 2000,
+        "timeoutMs": 25
+      }
+    ]
+  },
+  {
+    "id": "isolation-1",
+    "scenario": "room-isolation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2007,
+    "passed": true,
+    "outcomes": {
+      "roomAOld": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "roomBCurrent": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "roomBEpoch": 0
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927234-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927234-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927234-1",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444927234-1",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  },
+  {
+    "id": "isolation-2",
+    "scenario": "room-isolation",
+    "scheduled": {
+      "toolDelayMs": 2000,
+      "correctionAtMs": 800,
+      "timeoutMs": 5000,
+      "stressMode": true
+    },
+    "elapsedMs": 2007,
+    "passed": true,
+    "outcomes": {
+      "roomAOld": {
+        "kind": "rejected",
+        "name": "StaleResultError"
+      },
+      "roomBCurrent": {
+        "kind": "resolved",
+        "value": {
+          "status": "found",
+          "item": {
+            "partId": "4472",
+            "units": 12,
+            "shelf": "B4"
+          }
+        }
+      },
+      "roomBEpoch": 0
+    },
+    "events": [
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444929241-1",
+        "identifier": "4471",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444929241-1",
+        "identifier": "4471",
+        "status": "stale",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444929241-1",
+        "identifier": "4472",
+        "status": "started",
+        "epoch": 0,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      },
+      {
+        "type": "vairynt.tool",
+        "tool": "lookupInventory",
+        "requestId": "1790444929241-1",
+        "identifier": "4472",
+        "status": "found",
+        "epoch": 0,
+        "durationMs": 2007,
+        "stressMode": true,
+        "delayMs": 2000,
+        "timeoutMs": 5000
+      }
+    ]
+  }
+]

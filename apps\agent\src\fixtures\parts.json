@@ -1,0 +1,8 @@
+{
+  "fixtureLabel": "SYNTHETIC DEMO PART CATALOG — NOT PRODUCTION DATA",
+  "items": {
+    "4471": { "partId": "4471", "name": "Drive bearing", "compatibleModels": ["X220"] },
+    "4472": { "partId": "4472", "name": "Shaft seal kit", "compatibleModels": ["X220"] },
+    "4473": { "partId": "4473", "name": "Intake gasket", "compatibleModels": ["X220"] }
+  }
+}

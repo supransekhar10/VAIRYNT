@@ -1,0 +1,10 @@
+{
+  "fixtureLabel": "SYNTHETIC DEMO MANUAL — NOT MANUFACTURER GUIDANCE",
+  "items": {
+    "X220": {
+      "modelId": "X220",
+      "title": "Synthetic X220 service manual",
+      "summary": "Isolate power, apply lockout and tagout, verify zero energy, then inspect the guarded drive assembly."
+    }
+  }
+}

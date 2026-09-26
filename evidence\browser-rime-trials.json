@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "scope": "Real browser microphone to LiveKit transcript to Rime playback. Pending manual execution; no latency values have been recorded.",
+  "requiredMeasurement": "Only enter audibleCutoffLatencyMs after recorded browser output waveform analysis shows silence using one local monotonic clock.",
+  "trials": [
+    { "id": "browser-rime-01", "scenario": "inventory interruption", "status": "pending", "toolDelayMs": null, "correctionAtMs": null, "audibleCutoffLatencyMs": null, "measurementMethod": null, "failure": null },
+    { "id": "browser-rime-02", "scenario": "rapid 4471 to 4472 to 4473", "status": "pending", "toolDelayMs": null, "correctionAtMs": null, "audibleCutoffLatencyMs": null, "measurementMethod": null, "failure": null },
+    { "id": "browser-rime-03", "scenario": "cancel that", "status": "pending", "toolDelayMs": null, "correctionAtMs": null, "audibleCutoffLatencyMs": null, "measurementMethod": null, "failure": null },
+    { "id": "browser-rime-04", "scenario": "tool timeout", "status": "pending", "toolDelayMs": null, "correctionAtMs": null, "audibleCutoffLatencyMs": null, "measurementMethod": null, "failure": null },
+    { "id": "browser-rime-05", "scenario": "Rime playback recovery", "status": "pending", "toolDelayMs": null, "correctionAtMs": null, "audibleCutoffLatencyMs": null, "measurementMethod": null, "failure": null }
+  ]
+}
