@@ -2,12 +2,6 @@
   <h1>VAIRYNT</h1>
   <p><strong>A voice workspace for field-service technicians</strong></p>
   <p>Look up inventory, parts, and manuals through a real-time voice session.</p>
-  <p>
-    <a href="#overview">Overview</a> ·
-    <a href="#architecture">Architecture</a> ·
-    <a href="#getting-started">Getting started</a> ·
-    <a href="#verification-and-evidence">Verification</a>
-  </p>
 </div>
 
 <p align="center">
