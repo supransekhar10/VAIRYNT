@@ -1,55 +1,95 @@
-# VAIRYNT
+<div align="center">
+  <h1>VAIRYNT</h1>
+  <p><strong>A voice workspace for field-service technicians</strong></p>
+  <p>Look up inventory, parts, and manuals through a real-time voice session.</p>
+  <p>
+    <a href="#overview">Overview</a> ·
+    <a href="#architecture">Architecture</a> ·
+    <a href="#getting-started">Getting started</a> ·
+    <a href="#verification-and-evidence">Verification</a>
+  </p>
+</div>
 
-**A voice workspace for field service technicians.**
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-24%2B-339933?logo=nodedotjs&logoColor=white" alt="Node.js 24+">
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/LiveKit-Agents-4B5CFF" alt="LiveKit Agents">
+</p>
 
-VAIRYNT lets a technician ask for inventory, part, and manual information by voice. A browser client joins a LiveKit room, while a separately hosted voice agent handles speech recognition, request processing, and spoken responses.
+> [!IMPORTANT]
+> VAIRYNT currently uses synthetic inventory and service data. No public deployment URL or real-world inventory integration has been verified. Provider-free benchmark timings measure local test execution; they are not measurements of audible interruption latency.
 
-## Highlights
+## Overview
 
-- Start a microphone-enabled session from the web app.
-- Look up synthetic inventory, part, and manual data with voice.
-- Correct or cancel a request while it is in progress.
-- Keep turns isolated by room and prevent stale tool results from being delivered.
-- Inspect session diagnostics and export local session evidence.
+| Item | Details |
+| --- | --- |
+| Purpose | Give field-service technicians a hands-free way to look up inventory, part details, and manuals. |
+| User interface | React web app with a LiveKit voice session, transcript, session controls, and diagnostics. |
+| Voice pipeline | Silero VAD, Groq speech recognition, Gemini response generation, and Rime streaming text-to-speech. |
+| Request handling | Room-scoped turn tracking supports corrections, cancellation, timeouts, and stale-result fencing. |
+| Data | Local synthetic fixtures for inventory, parts, and manuals. |
+
+## Features
+
+- Start and end microphone-enabled technician sessions from the browser.
+- Look up inventory, part information, and equipment manuals by voice.
+- Correct or cancel a request while work is in progress.
+- Keep requests isolated by LiveKit room and prevent stale responses from being delivered.
+- Inspect tool events, timing controls, voice status, and exportable session evidence.
 
 ## Architecture
 
-- **Web:** React, TypeScript, Vite, and LiveKit Components.
-- **API:** Fastify issues short-lived LiveKit room tokens and explicitly dispatches the configured agent.
-- **Voice agent:** LiveKit Agents with Silero VAD, Groq speech recognition, Gemini, and Rime streaming text-to-speech.
-- **Shared core:** TypeScript utilities used by the workspaces.
+| Component | Responsibility |
+| --- | --- |
+| **Web client** | React and LiveKit Components provide the session interface and diagnostics. |
+| **API service** | Fastify serves the built web app, issues short-lived LiveKit room tokens, and dispatches the configured agent. |
+| **Voice agent** | LiveKit Agents coordinates speech recognition, Gemini, Rime, and technician lookup tools. |
+| **Shared core** | TypeScript utilities shared across the workspaces. |
 
-The web service and voice agent run as separate processes. The web service serves the built frontend and same-origin `/api/*` routes. Provider credentials belong in server-side environment variables and are never sent to the browser.
+The browser calls the API over same-origin `/api/*` routes. Provider credentials stay in server-side environment variables and are not exposed to browser code. The API service and LiveKit worker are deployed separately.
 
-## Requirements
+## Getting started
+
+### Requirements
 
 - Node.js 24 or newer
 - npm 11.6 or newer
 - A LiveKit project
-- Provider credentials for the voice agent: Google Gemini, Groq, and Rime
+- Google Gemini, Groq, and Rime credentials for the voice worker
 
-## Local development
+### Install and configure
 
-1. Install dependencies and create a local environment file:
+```sh
+git clone https://github.com/supransekhar10/VAIRYNT.git
+cd VAIRYNT
+npm ci
+```
 
-   ```sh
-   npm ci
-   cp .env.example .env
-   ```
+Copy the example environment file:
 
-   On Windows PowerShell, use `Copy-Item .env.example .env`.
+```sh
+# macOS / Linux
+cp .env.example .env
 
-2. Fill in `.env`. The API needs `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET`, and `LIVEKIT_AGENT_NAME`. The voice agent also needs `GOOGLE_API_KEY`, `GEMINI_MODEL`, `GROQ_API_KEY`, `GROQ_STT_MODEL`, `RIME_API_KEY`, `RIME_MODEL`, `RIME_VOICE`, and `RIME_LANGUAGE`.
+# Windows PowerShell
+Copy-Item .env.example .env
+```
 
-3. Run each workspace in a separate terminal:
+Configure the LiveKit values for the API and worker. The API needs `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET`, and `LIVEKIT_AGENT_NAME`. The voice worker also needs `GOOGLE_API_KEY`, `GEMINI_MODEL`, `GROQ_API_KEY`, `GROQ_STT_MODEL`, `RIME_API_KEY`, `RIME_MODEL`, `RIME_VOICE`, and `RIME_LANGUAGE`.
 
-   ```sh
-   npm run dev:api
-   npm run dev:agent
-   npm run dev:web
-   ```
+Never commit `.env` or `agent-secrets.env`. Keep provider credentials on the server and provide the worker secrets through your hosting environment.
 
-   The Vite development server proxies `/api` requests to the local API. Microphone access requires HTTPS or `localhost`.
+### Run locally
+
+Start each process in a separate terminal:
+
+```sh
+npm run dev:api
+npm run dev:agent
+npm run dev:web
+```
+
+Vite proxies `/api` requests to the local Fastify service. Microphone access requires HTTPS or `localhost`.
 
 ## Build and verification
 
@@ -57,13 +97,18 @@ The web service and voice agent run as separate processes. The web service serve
 npm run typecheck
 npm test
 npm run build
+```
+
+Optional provider and turn-fencing checks:
+
+```sh
 npm run check:providers
 npm run benchmark:fencing --workspace @vairynt/agent
 ```
 
-The provider check calls Gemini, Groq, and Rime and requires valid credentials. The fencing benchmark uses synthetic data and makes no provider calls. Its elapsed times measure local test execution; they are not audible interruption latency measurements.
+The provider check contacts Gemini, Groq, and Rime and requires valid credentials. The fencing benchmark uses synthetic data and makes no provider calls.
 
-## Production
+## Deployment
 
 Build and run the web/API service with Docker:
 
@@ -72,9 +117,13 @@ docker build -f Dockerfile.web -t vairynt-web .
 docker run --rm -p 3000:3000 --env-file .env vairynt-web
 ```
 
-The root `Dockerfile` builds the LiveKit voice-agent worker image. Deploy that worker separately and configure its provider secrets in the hosting environment. See [.env.example](.env.example) for variable names and [RIME_EVIDENCE.md](RIME_EVIDENCE.md) for the current evidence status and measurement limitations.
+The root `Dockerfile` builds the LiveKit voice-agent worker. Deploy it separately, then configure the web service to dispatch the matching `LIVEKIT_AGENT_NAME`.
 
-## Repository layout
+## Verification and evidence
+
+The repository includes a provider-free fencing benchmark and a manual browser/Rime trial procedure. The real microphone-to-playback trials are pending. See [RIME_EVIDENCE.md](RIME_EVIDENCE.md), [the trial procedure](docs/browser-rime-trial-procedure.md), and [the submission checklist](docs/submission-checklist.md) for current scope and limitations.
+
+## Project structure
 
 ```text
 apps/
@@ -87,5 +136,3 @@ docs/          Demo and manual trial procedures
 evidence/      Benchmark output and browser-trial records
 scripts/       Provider verification
 ```
-
-The demo outline and submission checklist are in [docs/](docs/). Evidence files are retained because the benchmark and trial procedures generate or consume them.
